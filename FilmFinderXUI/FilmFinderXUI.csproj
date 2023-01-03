@@ -59,25 +59,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Search.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Profile.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Profile.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Recommended.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Recommended.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Search.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Settings.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Likes.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Interests.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="History.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Settings.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>
