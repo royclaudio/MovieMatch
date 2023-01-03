@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FilmFinderXUI.Settings" BackgroundColor="#8bd6f2"
+             Title="Settings"
+             >
+    <Grid RowDefinitions="Auto,*,Auto" Padding="16,8">
+        <Border Grid.Row="0" Stroke="Transparent">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="Auto,*">
+                <Button x:Name="backbtn" ImageSource="user.png" Clicked="Back" Grid.Column="0" BackgroundColor="Transparent" />
+                <Label x:Name="backbtnlabel" Grid.Column="1" Text="Settings" HorizontalOptions="End" VerticalOptions="Center"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" VerticalOptions="Start" Stroke="Transparent" Padding="10,10">
+            <StackLayout VerticalOptions="Center"  >
+                <Entry Placeholder="Username" Margin="0,0,0,5" BackgroundColor="#FFFFFF"/>
+                <Entry Placeholder="Password" Margin="0,5" BackgroundColor="#FFFFFF"/>
+                <Entry Placeholder="Email" Margin="0,5" BackgroundColor="#FFFFFF"/>
+                <Entry Placeholder="Phone" Margin="0,5,0,0" BackgroundColor="#FFFFFF"/>
+            </StackLayout>
+        </Border>
+        <Button Grid.Row="2" Text="Save"/>
+
+    </Grid>
+
+
+</ContentPage>
+<!--<StackLayout VerticalOptions="Center">
+        <Border >
+            <Grid RowDefinitions="Auto" ColumnDefinitions="Auto,*">
+                <Button x:Name="backbtn" ImageSource="user.png" Clicked="Back" Grid.Column="0"  BackgroundColor="#8BD6F2"/>
+                <Label x:Name="backbtnlabel" Grid.Column="1" Text="Settings" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </Border>
+        <Border VerticalOptions="End">
+            <StackLayout VerticalOptions="Center">
+                <Entry Placeholder="Username" />
+                <Entry Placeholder="Password" />
+                <Entry Placeholder="Email" />
+                <Entry Placeholder="Phone" />
+            </StackLayout>
+        </Border>
+                <Button Text="Save"/>
+
+    </StackLayout>-->

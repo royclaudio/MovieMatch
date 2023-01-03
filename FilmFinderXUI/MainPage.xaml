@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FilmFinderXUI.MainPage" BackgroundColor="#8bd6f2">
+    <StackLayout 
+                 Margin="5,0" 
+                 >
+
+        <Label Text="Train AI" FontAttributes="Bold" FontSize="Header" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+        <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" Margin="0,0,0,5" />
+        <BoxView Color="#8bd6f2" HeightRequest="70" HorizontalOptions="Fill" Margin="0,0,0,5" />
+
+        <Border Stroke="black" x:Name="moviecard"
+        StrokeThickness="4"
+        StrokeShape="RoundRectangle 10,10,10,10"
+        Background="white" 
+        Padding="16,8">
+            <Border.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Up" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout MaximumHeightRequest="500" MinimumHeightRequest="500">
+
+                <Label Text="Spider-Man" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <!--<BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />-->
+                <Border Stroke="black"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 0,0,0,0"
+                    Background="#8bd6f2"
+                    MinimumHeightRequest="300" MaximumHeightRequest="300" >
+                    <!--<Image Aspect="Center" FlexLayout.AlignSelf="Center" Source="dotnet_bot.png" MaximumHeightRequest="200"  MinimumHeightRequest="200" HorizontalOptions="Center" MaximumWidthRequest="200" MinimumWidthRequest="200"  />-->
+                    <Image>
+                        <Image.Source>
+                            <UriImageSource Uri="https://i.ebayimg.com/images/g/a2wAAOxyP4dTeYQ7/s-l1600.jpg"
+                        CacheValidity="10:00:00:00" />
+                        </Image.Source>
+                    </Image>
+                    <!--https://i.ebayimg.com/images/g/a2wAAOxyP4dTeYQ7/s-l1600.jpg-->
+                </Border>
+                <Label Text="Genre(s)" FontSize="14" FontAttributes="Bold"   />
+                <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+                <Label Text="Action, Adventure"/>
+                <HorizontalStackLayout HorizontalOptions="End">
+                    <Label Text="Released: " FontSize="12" FontAttributes="Bold"  />
+                    <Label Text="03 May 2002" FontSize="Micro" FontAttributes="Bold"  />
+                </HorizontalStackLayout>
+                <Border BackgroundColor="White" Stroke="white">
+                    <Grid RowDefinitions="65,65" ColumnDefinitions="*,*">
+                        <Button Text="Liked" ImageSource="like.png" Grid.Row="0" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" MaximumHeightRequest="50" MinimumHeightRequest="50" />
+                        <Button Text="Dislike" ImageSource="showlove.png" Grid.Row="0" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
+                        <Button Text="Interested" ImageSource="like.png" Grid.Row="1" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
+                        <Button Text="Not Interested" ImageSource="showlove.png" Grid.Row="1" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+        </Border>
+
+        <!--<Border Stroke="black"
+        StrokeThickness="4"
+        StrokeShape="RoundRectangle 10,10,10,10"
+        Background="white" MaximumHeightRequest="220" MinimumHeightRequest="220"
+        Padding="16,8">
+            <VerticalStackLayout MaximumHeightRequest="180" MinimumHeightRequest="180" VerticalOptions="Center" >
+                <Button ToolTipProperties.Text="Seen and like" Text="Like" BorderColor="#000000" BorderWidth="2" FontAttributes="Bold,Italic" Margin="5,0" BackgroundColor="#8BD6F2"  TextColor="#000000" />
+                <Button ToolTipProperties.Text="Seen and dislike" Text="Dislike" BorderColor="#000000" BorderWidth="2" FontAttributes="Bold,Italic" Margin="5" BackgroundColor="#8BD6F2" TextColor="#000000"  />
+
+                <Button ToolTipProperties.Text="Not seen snd interested" Text="Not Interested" BorderColor="#000000" BorderWidth="2" FontAttributes="Bold,Italic" Margin="5,0" BackgroundColor="#8BD6F2" TextColor="#000000"  />
+                <Button ToolTipProperties.Text="Not seen and Not interested" Text="Interested"  BorderColor="#000000" BorderWidth="2" FontAttributes="Bold,Italic" Margin="5,5,5,0" BackgroundColor="#8BD6F2" TextColor="#000000"  />
+
+            </VerticalStackLayout>
+        </Border>-->
+
+
+    </StackLayout>
+
+
+
+</ContentPage>

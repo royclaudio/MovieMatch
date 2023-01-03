@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FilmFinderXUI.Recommended" BackgroundColor="#8bd6f2"
+             Title="Recommended">
+
+    <Grid RowDefinitions="20,70,*,Auto" Margin="5,0" >
+        <Label Text="Recommended Genre:" FontAttributes="Bold" FontSize="Header" Grid.Row="0" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Center"/>
+        <Label Text="Comedy" FontAttributes="Bold" FontSize="Header" Grid.Row="1" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Center"/>
+
+        <!--<Picker Grid.Row="1" Title="Select Genre" FontSize="14" VerticalOptions="Start" FontAttributes="Bold"  Margin="5,0" HorizontalTextAlignment="Center" TextColor="#030303" IsVisible="True" TitleColor="#000000" />-->
+        <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand"
+                    Grid.Row="2" >
+            <StackLayout>
+                <Border Stroke="black"
+                        StrokeThickness="4" BackgroundColor="White"
+                        StrokeShape="RoundRectangle 10,10,10,10" Padding="-5,0,15,0">
+                    <Grid RowDefinitions="Auto" ColumnDefinitions="*,*">
+                        <Border MinimumHeightRequest="200" MaximumHeightRequest="200" Stroke="Transparent">
+                            <Image>
+                                <Image.Source>
+                                    <UriImageSource
+                                        Uri="https://i.ebayimg.com/images/g/yj8AAOSwsaFgdFvP/s-l1600.jpg"
+                                        CacheValidity="10:00:00:00" />
+                                </Image.Source>
+                            </Image>
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1">
+                            <Label Text="Recommended" FontAttributes="Bold" FontSize="Header" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                            <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+                            <Label Text="Action, Adventure" FontAttributes="Bold" FontSize="12" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                            <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+                            <Border Stroke="Transparent" >
+                                <Grid RowDefinitions="Auto,Auto,10,Auto,Auto" ColumnDefinitions="*,Auto">
+                                    <Label Text="Directors by" Grid.Row="0" Grid.ColumnSpan="2"/>
+                                    <Label Text="Sam Raimi" Grid.Row="1" Grid.ColumnSpan="2" FontSize="12" />
+                                    <BoxView Color="Black" Grid.Row="2" HeightRequest="2" HorizontalOptions="Fill" />
+                                    <Label Text="Stars" Grid.Row="3" Grid.ColumnSpan="2"/>
+                                    <Label Text="Tobey Maguire,Tobey Maguire,Tobey Maguire" FontSize="12" Grid.Row="4" Grid.ColumnSpan="2"/>
+                                </Grid>
+                            </Border>
+                            <Grid ColumnDefinitions="*,*,*">
+                                <Button Text="Info" ImageSource="showlove.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
+                                <Button Text="Save" Clicked="SavePopup" Grid.Column="1" ImageSource="like.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
+                                <Button Text="Share" Grid.Column="2" ImageSource="user.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
+                            </Grid>
+                            <Label Text="Released 03 may 2022" FontAttributes="Bold" FontSize="Small" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+        <Picker Grid.Row="3" Title="Select Genre" FontSize="14" VerticalOptions="Start" FontAttributes="Bold"  Margin="5,0" HorizontalTextAlignment="Center" TextColor="#030303" IsVisible="True" TitleColor="#000000" />
+
+    </Grid>
+</ContentPage>
+<!--<Grid RowDefinitions="Auto,*">
+    <Picker Title="Select Genre" FontSize="14" VerticalOptions="Start" FontAttributes="Bold"  Margin="5,0" HorizontalTextAlignment="Center" TextColor="#030303" BackgroundColor="#9EC3CF" IsVisible="True" TitleColor="#000000" />
+    <ScrollView x:Name="scrollView"
+                    Grid.Row="1"
+                    VerticalOptions="FillAndExpand">
+        <StackLayout>
+
+            <Border Stroke="black"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 0,0,0,0"
+                    Background="#8bd6f2">
+                <Grid RowDefinitions="Auto" ColumnDefinitions="*,*">
+                    <Image>
+                        <Image.Source>
+                            <UriImageSource Uri="https://i.ebayimg.com/images/g/a2wAAOxyP4dTeYQ7/s-l1600.jpg"
+                        CacheValidity="10:00:00:00" />
+                        </Image.Source>
+                    </Image>
+                    <VerticalStackLayout Grid.Column="1">
+                        <Label Text="Spider-Man" FontAttributes="Bold" FontSize="Header" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                        <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+
+                        <Label Text="Action, Adventure" FontAttributes="Bold" FontSize="Small" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                        <Label Text="Released 03 may 2022" FontAttributes="Bold" FontSize="Small" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </StackLayout>
+    </ScrollView>
+</Grid>-->
