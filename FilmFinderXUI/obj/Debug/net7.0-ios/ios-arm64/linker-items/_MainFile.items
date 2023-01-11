@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <_MainFile Include="/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/linker-cache/main.arm64.mm">
+    <_MainFile Include="/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/linker-cache/main.arm64.mm">
       <Arch>arm64</Arch>
       <Arguments>-DDEBUG</Arguments>
     </_MainFile>

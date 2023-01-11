@@ -12,57 +12,57 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = FilmFinderXUI
-build_property.ProjectDir = /Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/
+build_property.ProjectDir = /Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/App.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/AppShell.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/MainPage.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Profile.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Profile.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Pages.Profile.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Profile.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Profile.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Recommended.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Recommended.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Pages.Recommended.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Recommended.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Recommended.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Search.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Search.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Pages.Search.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Search.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Search.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Settings.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Pages/Settings.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Pages.Settings.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Settings.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Settings.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Resources/Styles/Colors.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[/Users/royclaudio/Projects/MovieMatch/MovieMatch/FilmFinderXUI/Resources/Styles/Styles.xaml]
+[/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FilmFinderXUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml

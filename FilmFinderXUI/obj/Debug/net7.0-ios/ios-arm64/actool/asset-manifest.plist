@@ -6,11 +6,58 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/Assets.car</string>
-			<string>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/appicon60x60@2x.png</string>
-			<string>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/appicon76x76@2x~ipad.png</string>
-			<string>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/partial-info.plist</string>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/Assets.car</string>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/appicon60x60@2x.png</string>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/bundle/appicon76x76@2x~ipad.png</string>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/partial-info.plist</string>
 		</array>
 	</dict>
+	<key>com.apple.actool.document.warnings</key>
+	<array>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./appicon.appiconset/(null)[2d][appicon20x20@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon20x20@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon29x29@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon29x29@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon40x40@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon40x40@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon60x60@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon60x60@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon76x76@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon83.5x83.5@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appiconItunesArtwork 3.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "appicon" has 11 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./appicon.appiconset/(null)[2d][appicon20x20@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon20x20@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon29x29@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon29x29@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon40x40@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon40x40@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon60x60@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon60x60@3x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon76x76@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appicon83.5x83.5@2x 3.png]</string>
+				<string>./appicon.appiconset/(null)[2d][appiconItunesArtwork 3.png]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "appicon" has 11 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+	</array>
 </dict>
 </plist>

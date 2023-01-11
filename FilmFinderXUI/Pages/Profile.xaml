@@ -1,38 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FilmFinderXUI.Profile" BackgroundColor="#8bd6f2"
+
+             x:Class="FilmFinderXUI.Profile" BackgroundColor="#253f4b"
              Title="Profile">
-    <Grid RowDefinitions="Auto,*,Auto" Margin="5,0">
-        <Border Grid.Row="0" Stroke="#8bd6f2" BackgroundColor="#8bd6f2"
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings" AFC9DC />
+    </ContentPage.ToolbarItems>-->
+
+    <Grid RowDefinitions="Auto,*,Auto" Margin="-2,-70">
+        <Border Grid.Row="0" Stroke="Transparent" BackgroundColor="#446879" 
         StrokeThickness="4"
         StrokeShape="RoundRectangle 0,0,0,0"
-        Padding="0,0">
-            <Grid x:Name="profileheader" RowDefinitions="Auto,Auto,Auto,Auto,2" ColumnDefinitions="*,*,*">
-                <Label Text="Username" FontAttributes="Bold" FontSize="Header" Grid.Row="0" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Start"/>
-                <Button ImageSource="settings.png" Clicked="Settings" Grid.Row="0" Grid.Column="3" BorderColor="#8bd6f2" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" HorizontalOptions="End" VerticalOptions="End" />
-
+        Padding="5,0,0,0">
+            <Grid x:Name="profileheader" RowDefinitions="Auto,Auto,Auto,Auto,2" ColumnDefinitions="*,*,*" >
+                <Label Text="Username" TextColor="white" FontAttributes="Bold" FontSize="Header" Grid.Row="0" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Start"/>
+                <Button ImageSource="settings.png" Clicked="Settings" Grid.Row="0" Grid.Column="3" BorderWidth="0" FontAttributes="Bold,Italic"  BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" />
                 <HorizontalStackLayout Grid.Row="1">
                     <Image Source="calendar.png" Margin="0,0,3,0"></Image>
-                    <Label Text="Joined January 2023" FontAttributes="Bold" FontSize="10"/>
-                </HorizontalStackLayout >
+                    <Label Text="Joined January 2023" FontAttributes="Bold" FontSize="10" TextColor="white"/>
+                </HorizontalStackLayout>
                 <HorizontalStackLayout Grid.Row="2">
-                    <Label Text="10 " FontSize="13"></Label>
-                    <Label Text="Liked" FontAttributes="Bold" FontSize="12" VerticalOptions="Center"/>
-                </HorizontalStackLayout >
+                    <Label Text="10 " FontSize="13" TextColor="white"></Label>
+                    <Label Text="Liked" FontAttributes="Bold" FontSize="12" VerticalOptions="Center" TextColor="white"/>
+                </HorizontalStackLayout>
                 <HorizontalStackLayout Grid.Row="2" Grid.Column="1">
-                    <Label Text="10 " FontSize="13"></Label>
-                    <Label Text="Disliked" FontAttributes="Bold" FontSize="12" VerticalOptions="Center"/>
+                    <Label Text="10 " FontSize="13" TextColor="white"></Label>
+                    <Label Text="Disliked" FontAttributes="Bold" FontSize="12" VerticalOptions="Center" TextColor="white"/>
                 </HorizontalStackLayout >
-                <Button x:Name="interests" Text="Interests"  ImageSource="showlove.png" ContentLayout="Top" Grid.Row="3" Grid.Column="0"  BorderColor="#8bd6f2" BorderWidth="1" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" CharacterSpacing="-1"/>
-                <Button x:Name="liked" Text="Seen Liked" FontAutoScalingEnabled="True" ImageSource="like.png" ContentLayout="Top" Grid.Row="3" Grid.Column="1"  BorderColor="#8bd6f2" BorderWidth="1" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" CharacterSpacing="-1" />
-                <Button x:Name="History" Text="History"  ImageSource="movie.png" ContentLayout="Top" Grid.Row="3" Grid.Column="2"  BorderColor="#8bd6f2" BorderWidth="1" FontAttributes="Bold,Italic" BackgroundColor="#8BD6F2" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="Center" CharacterSpacing="-1" />
+                <Button x:Name="interests" Text="Interests"  ImageSource="showlove.png" ContentLayout="Top" Grid.Row="3" Grid.Column="0"  BorderWidth="0" FontAttributes="Bold,Italic"  BackgroundColor="Transparent" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" CharacterSpacing="-1"/>
+                <Button x:Name="liked" Text="Seen Liked" FontAutoScalingEnabled="True" ImageSource="like.png" ContentLayout="Top" Grid.Row="3" Grid.Column="1" BorderWidth="0" FontAttributes="Bold,Italic"  BackgroundColor="Transparent" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" CharacterSpacing="-1" />
+                <Button x:Name="History" Text="History"  ImageSource="movie.png" ContentLayout="Top" Grid.Row="3" Grid.Column="2"   BorderWidth="0" FontAttributes="Bold,Italic" BackgroundColor="Transparent" TextColor="#000000" HorizontalOptions="Center"  VerticalOptions="Center" CharacterSpacing="-1" />
                 <BoxView x:Name="optionselected" Color="Black" Grid.Row="4" Grid.Column="0" HorizontalOptions="Fill" />
             </Grid>
         </Border>
-
-        <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand"
-                    Grid.Row="1" >
+        <!--<ScrollView Margin="20">
+            <StackLayout x:Name="StackLayout">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView Color="{Binding Color}"
+                                 HeightRequest="32"
+                                 WidthRequest="32"
+                                 VerticalOptions="Center" />
+                            <Label Text="{Binding FriendlyName}"
+                               FontSize="24"
+                               VerticalOptions="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>-->
+        <ScrollView x:Name="scrollView"
+                    VerticalOptions="FillAndExpand" BackgroundColor="Transparent"
+                    Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="0,-3,0,0">
             <ScrollView.GestureRecognizers>
                 <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
                 <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
@@ -78,8 +100,9 @@
                     </Grid>
                 </Border>
             </StackLayout>
+
         </ScrollView>
-        <Picker Grid.Row="2" Title="Select Genre" FontSize="14" VerticalOptions="Start" FontAttributes="Bold"  Margin="5,0" HorizontalTextAlignment="Center" TextColor="#030303" IsVisible="True" TitleColor="#000000" />
+        <Picker Grid.Row="2" BackgroundColor="#AFC9DC" Title="Select Genre" FontSize="14" VerticalOptions="Start" FontAttributes="Bold"  Margin="5" HorizontalTextAlignment="Center"  IsVisible="True" TitleColor="#000000" />
 
     </Grid>
 

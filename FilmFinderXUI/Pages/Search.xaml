@@ -1,50 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FilmFinderXUI.Search" BackgroundColor="#8bd6f2"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:filmfinderxui="clr-namespace:FilmFinderXUI.Models"
+             x:Class="FilmFinderXUI.Search" BackgroundColor="#253f4b"
+                          x:DataType="filmfinderxui:MovieCatalogModel"
+
              Title="Search">
-    <Grid RowDefinitions="Auto,*" Margin="5,0" >
-        <SearchBar Placeholder="Search" FontSize="14"  Margin="0" VerticalOptions="Start" BackgroundColor="#8bd6f2" PlaceholderColor="#000000" TextColor="#090909" CancelButtonColor="#0D0C0C" />
-        <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand"
-                    Grid.Row="1" >
-            <StackLayout>
-                <Border Stroke="black"
-                        StrokeThickness="4" BackgroundColor="White"
+    <Grid RowDefinitions="Auto,*" Margin="5,0">
+        <SearchBar Placeholder="Search" FontSize="14"  Margin="0" VerticalOptions="Start" BackgroundColor="Transparent"  TextColor="White" CancelButtonColor="white" />
+       <CollectionView x:Name="collectionView" Grid.Row="2"  Margin="5,10"  >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout x:Name="stackLayout" Margin="0, 5">
+                        <Border Stroke="black"
+                        StrokeThickness="4" BackgroundColor="#446879"
                         StrokeShape="RoundRectangle 10,10,10,10" Padding="-5,0,15,0">
-                    <Grid RowDefinitions="Auto" ColumnDefinitions="*,*">
-                        <Border MinimumHeightRequest="200" MaximumHeightRequest="200" Stroke="Transparent">
-                            <Image>
-                                <Image.Source>
-                                    <UriImageSource
-                                        Uri="https://i.ebayimg.com/images/g/yj8AAOSwsaFgdFvP/s-l1600.jpg"
+                            <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,*">
+                                <Label Text="{Binding Title}" TextColor="white"  FontAttributes="Bold" FontSize="Header" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+
+                                <Border Grid.Row="1" MinimumHeightRequest="200" MaximumHeightRequest="200" Stroke="Transparent">
+                                    <Image>
+                                        <Image.Source>
+                                            <UriImageSource
+                                        Uri="{Binding Poster}"
                                         CacheValidity="10:00:00:00" />
-                                </Image.Source>
-                            </Image>
-                        </Border>
-                        <VerticalStackLayout Grid.Column="1">
-                            <Label Text="Search" FontAttributes="Bold" FontSize="Header" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-                            <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
-                            <Label Text="Action, Adventure" FontAttributes="Bold" FontSize="12" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-                            <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
-                            <Border Stroke="Transparent" >
-                                <Grid RowDefinitions="Auto,Auto,10,Auto,Auto" ColumnDefinitions="*,Auto">
-                                    <Label Text="Directors by" Grid.Row="0" Grid.ColumnSpan="2"/>
-                                    <Label Text="Sam Raimi" Grid.Row="1" Grid.ColumnSpan="2" FontSize="12" />
-                                    <BoxView Color="Black" Grid.Row="2" HeightRequest="2" HorizontalOptions="Fill" />
-                                    <Label Text="Stars" Grid.Row="3" Grid.ColumnSpan="2"/>
-                                    <Label Text="Tobey Maguire,Tobey Maguire,Tobey Maguire" FontSize="12" Grid.Row="4" Grid.ColumnSpan="2"/>
-                                </Grid>
-                            </Border>
-                            <Grid ColumnDefinitions="*,*,*">
-                                <Button Text="Info" ImageSource="showlove.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
-                                <Button Text="Save" Clicked="SavePopup" Grid.Column="1" ImageSource="like.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
-                                <Button Text="Share" Grid.Column="2" ImageSource="user.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  TextColor="#000000" />
+                                        </Image.Source>
+                                    </Image>
+                                </Border>
+                                <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                                    <Label Text="Genre(s)" TextColor="white"  Grid.ColumnSpan="2" HorizontalOptions="Start"/>
+                                    <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+                                    <Label Text="{Binding Genre}" TextColor="white"  FontAttributes="Bold" FontSize="12" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                                    <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />
+                                    <Border Stroke="Transparent">
+                                        <Grid RowDefinitions="Auto,Auto,10,Auto,Auto" ColumnDefinitions="*,Auto">
+                                            <Label Text="Directored by" TextColor="white"  Grid.Row="0" Grid.ColumnSpan="2"/>
+                                            <Label Text="{Binding Director}" TextColor="white"  Grid.Row="1" Grid.ColumnSpan="2" FontSize="12" HorizontalOptions="Center"/>
+                                            <BoxView Color="Black" Grid.Row="2" HeightRequest="2" HorizontalOptions="Fill" />
+                                            <Label Text="Cast" TextColor="white"  Grid.Row="3" Grid.ColumnSpan="2"/>
+                                            <Label Text="{Binding Actors}" TextColor="white"  FontSize="12" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                                        </Grid>
+                                    </Border>
+                                    <Grid ColumnDefinitions="*,*,*">
+                                        <Button Text="Info" TextColor="white"  ImageSource="showlove.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"   />
+                                        <Button Text="Save" Clicked="SavePopup" Grid.Column="1" ImageSource="like.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic"  />
+                                        <Button Text="Share" Grid.Column="2" ImageSource="user.png" BackgroundColor="Transparent" HorizontalOptions="Center" ContentLayout="Top" BorderWidth="0" FontAttributes="Bold,Italic" />
+                                    </Grid>
+                                    <HorizontalStackLayout HorizontalOptions="End">
+                                        <Label Text="Released: " TextColor="white"  FontSize="12" FontAttributes="Bold"  />
+                                        <Label Text="{Binding Released}" TextColor="white"  FontSize="Micro" FontAttributes="Bold"  />
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
                             </Grid>
-                            <Label Text="Released 03 may 2022" FontAttributes="Bold" FontSize="Small" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-                        </VerticalStackLayout>
-                    </Grid>
-                </Border>
-            </StackLayout>
-        </ScrollView>
+                        </Border>
+
+                    </StackLayout>
+
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>

@@ -130,7 +130,17 @@
 
 @class Microsoft_Maui_MauiUIApplicationDelegate;
 @class AppDelegate;
+@class CommunityToolkit_Maui_Core_Views_PaddedButton;
+@class CommunityToolkit_Maui_Core_Views_PaddedLabel;
+@class CommunityToolkit_Maui_Core_Views_RoundedStackView;
+@class CommunityToolkit_Maui_Core_Views_AlertView;
 @class PlatformGraphicsView;
+@class Microsoft_Maui_Platform_PlatformTouchGraphicsView;
+@class CommunityToolkit_Maui_Core_Views_MauiDrawingView;
+@class Microsoft_iOS__UIKit_UIAdaptivePresentationControllerDelegate;
+@class Microsoft_iOS__UIKit_UIPopoverPresentationControllerDelegate;
+@class CommunityToolkit_Maui_Core_Views_MauiPopup_PopoverDelegate;
+@class CommunityToolkit_Maui_Core_Views_MauiPopup;
 @class Microsoft_iOS__VisionKit_VNDocumentCameraViewControllerDelegate;
 @class Microsoft_iOS__WatchConnectivity_WCSessionDelegate;
 @class Microsoft_iOS__Speech_SFSpeechRecognitionTaskDelegate;
@@ -602,7 +612,6 @@
 @class Microsoft_iOS__UIKit_UIAccessibilityContainerDataTable;
 @class Microsoft_iOS__UIKit_UIActionSheetDelegate;
 @class Microsoft_iOS__UIKit_UIActivityItemSource;
-@class Microsoft_iOS__UIKit_UIAdaptivePresentationControllerDelegate;
 @class Microsoft_iOS__UIKit_UIAlertViewDelegate;
 @class Microsoft_iOS__UIKit_UIAppearanceContainer;
 @class Microsoft_iOS__UIKit_UIApplicationDelegate;
@@ -654,7 +663,6 @@
 @class Microsoft_iOS__UIKit_UIPickerViewModel;
 @class Microsoft_iOS__UIKit_UIPointerInteractionDelegate;
 @class Microsoft_iOS__UIKit_UIPopoverControllerDelegate;
-@class Microsoft_iOS__UIKit_UIPopoverPresentationControllerDelegate;
 @class Microsoft_iOS__UIKit_UIPreviewInteractionDelegate;
 @class Microsoft_iOS__UIKit_UIPrinterPickerControllerDelegate;
 @class Microsoft_iOS__UIKit_UIPrintInteractionControllerDelegate;
@@ -949,7 +957,6 @@
 @class Microsoft_Maui_Platform_MauiTimePicker;
 @class Microsoft_Maui_Platform_MauiWebViewNavigationDelegate;
 @class Microsoft_Maui_Platform_PageViewController;
-@class Microsoft_Maui_Platform_PlatformTouchGraphicsView;
 @class Microsoft_Maui_Platform_WrapperView;
 @class Microsoft_Maui_Handlers_PickerSource;
 @class Microsoft_Maui_MauiUISceneDelegate;
@@ -1286,6 +1293,54 @@
 	-(id) init;
 @end
 
+@interface CommunityToolkit_Maui_Core_Views_PaddedButton : UIButton {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface CommunityToolkit_Maui_Core_Views_PaddedLabel : UILabel {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(CGSize) intrinsicContentSize;
+	-(void) drawTextInRect:(CGRect)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface CommunityToolkit_Maui_Core_Views_RoundedStackView : UIStackView {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) drawRect:(CGRect)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface CommunityToolkit_Maui_Core_Views_AlertView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
 @interface PlatformGraphicsView : UIView {
 }
 	-(void) release;
@@ -1298,6 +1353,48 @@
 	-(void) drawRect:(CGRect)p0;
 	-(CGRect) bounds;
 	-(void) setBounds:(CGRect)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface Microsoft_Maui_Platform_PlatformTouchGraphicsView : PlatformGraphicsView {
+}
+	-(void) layoutSubviews;
+	-(void) touchesBegan:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesMoved:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesEnded:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesCancelled:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(id) init;
+@end
+
+@interface CommunityToolkit_Maui_Core_Views_MauiDrawingView : Microsoft_Maui_Platform_PlatformTouchGraphicsView {
+}
+	-(void) touchesBegan:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesMoved:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesEnded:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(void) touchesCancelled:(NSSet *)p0 withEvent:(UIEvent *)p1;
+	-(id) init;
+@end
+
+@interface Microsoft_iOS__UIKit_UIAdaptivePresentationControllerDelegate : NSObject<UIAdaptivePresentationControllerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface Microsoft_iOS__UIKit_UIPopoverPresentationControllerDelegate : NSObject<UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface CommunityToolkit_Maui_Core_Views_MauiPopup : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) viewDidLayoutSubviews;
+	-(void) viewWillDisappear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -6226,11 +6323,6 @@
 	-(id) init;
 @end
 
-@interface Microsoft_iOS__UIKit_UIAdaptivePresentationControllerDelegate : NSObject<UIAdaptivePresentationControllerDelegate> {
-}
-	-(id) init;
-@end
-
 @interface Microsoft_iOS__UIKit_UIAlertViewDelegate : NSObject<UIAlertViewDelegate> {
 }
 	-(id) init;
@@ -6478,11 +6570,6 @@
 @end
 
 @interface Microsoft_iOS__UIKit_UIPopoverControllerDelegate : NSObject<UIPopoverControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface Microsoft_iOS__UIKit_UIPopoverPresentationControllerDelegate : NSObject<UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate> {
 }
 	-(id) init;
 @end
@@ -7882,16 +7969,6 @@
 @interface Microsoft_Maui_Platform_PageViewController : Microsoft_Maui_Platform_ContainerViewController {
 }
 	-(void) traitCollectionDidChange:(UITraitCollection *)p0;
-@end
-
-@interface Microsoft_Maui_Platform_PlatformTouchGraphicsView : PlatformGraphicsView {
-}
-	-(void) layoutSubviews;
-	-(void) touchesBegan:(NSSet *)p0 withEvent:(UIEvent *)p1;
-	-(void) touchesMoved:(NSSet *)p0 withEvent:(UIEvent *)p1;
-	-(void) touchesEnded:(NSSet *)p0 withEvent:(UIEvent *)p1;
-	-(void) touchesCancelled:(NSSet *)p0 withEvent:(UIEvent *)p1;
-	-(id) init;
 @end
 
 @interface Microsoft_Maui_Platform_WrapperView : UIView {

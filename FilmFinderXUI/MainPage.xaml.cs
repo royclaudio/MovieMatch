@@ -21,10 +21,10 @@ public partial class MainPage : ContentPage
     }
 
 
-    private void Search(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new Search());
-    }
+    //private void Search(object sender, EventArgs e)
+    //{
+    //    Navigation.PushAsync(new Search(_dataService));
+    //}
 
     void OnSwiped(object sender, SwipedEventArgs e)
     {

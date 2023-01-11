@@ -1,4 +1,7 @@
-﻿using FilmFinderXUI.DataServices;
+﻿//using CommunityToolkit.Maui;
+using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
+using FilmFinderXUI.DataServices;
 using Microsoft.Extensions.Logging;
 
 namespace FilmFinderXUI;
@@ -10,7 +13,9 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+            //.UseMauiCommunityToolkitCore()
+            .UseMauiCommunityToolkit()
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -18,6 +23,11 @@ public static class MauiProgram
 		builder.Services.AddSingleton<IRestDataService, RestDataService>();
 
         builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<Recommended>();
+        builder.Services.AddSingleton<Search>();
+        builder.Services.AddSingleton<Profile>();
+
+
 
 #if DEBUG
         builder.Logging.AddDebug();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/FilmFinderXUI.csproj": {}
+    "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/FilmFinderXUI.csproj": {}
   },
   "projects": {
-    "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/FilmFinderXUI.csproj": {
+    "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/FilmFinderXUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/FilmFinderXUI.csproj",
+        "projectUniqueName": "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/FilmFinderXUI.csproj",
         "projectName": "FilmFinderXUI",
-        "projectPath": "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/FilmFinderXUI.csproj",
+        "projectPath": "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/FilmFinderXUI.csproj",
         "packagesPath": "/Users/RoyClaudio/.nuget/packages/",
-        "outputPath": "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/",
+        "outputPath": "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
@@ -50,6 +50,10 @@
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -168,6 +172,10 @@
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -231,6 +239,10 @@
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",

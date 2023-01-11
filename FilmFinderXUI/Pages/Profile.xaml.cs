@@ -1,5 +1,6 @@
 ﻿using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Shapes;
+using FilmFinderXUI.DataServices;
 
 namespace FilmFinderXUI;
 
@@ -9,120 +10,24 @@ public partial class Profile : ContentPage
     public double deltaStart;
     public double deltaCenter;
     public double deltaEnd;
-
     public int position = 0;
-    public Profile()
+    private readonly IRestDataService _dataService;
+    //public IEnumerable<Models.MovieCatalogModel> items;
+    public Profile(IRestDataService dataService)
     {
         InitializeComponent();
-        currentLayout = currentlayout;
+       
 
-
+        _dataService = dataService;
+        //items = (IEnumerable<Models.MovieCatalogModel>)_dataService.GetMoviesAsync();
+    }
+    async void Settings(object sender, EventArgs args)
+    {
+        await Navigation.PushAsync(new Settings());
     }
     async void SavePopup(object sender, EventArgs e)
     {
         string action = await DisplayActionSheet("Seen Movie", "Cancel", "Liked", "Disliked");
-    }
-    async void OnSwiped(object sender, SwipedEventArgs e)
-    {
-        uint duration = 300;
-        uint deltaduration = 150;
-
-        double currentposition = optionselected.X;
-        double nextposition = 0;
-        var currLayout = currentLayout;
-
-        switch (e.Direction)
-        {
-            case SwipeDirection.Left:
-                if (position < 2)
-                {
-                    if (position == 1)
-                    {
-                        nextposition = History.X;
-                        position = 2;
-                    }
-                    if (position == 0)
-                    {
-                        nextposition = liked.X;
-                        position = 1;
-                    }
-
-
-                    await Task.WhenAll(
-                    scrollView.TranslateTo(-400, 0, duration),
-                    scrollView.FadeTo(0, duration),
-                    optionselected.TranslateTo(nextposition, 0, duration)
-                    );
-                    await Task.WhenAll(
-                   scrollView.TranslateTo(400, 0, duration)
-
-                   );
-                    if (position == 2)
-                    {
-                        scrollView.Content = HistoryLayout();
-
-                    }
-                    if (position == 1)
-                    {
-                        scrollView.Content = LikedLayout();
-
-                    }
-
-                    await Task.WhenAll(
-                    scrollView.TranslateTo(0, 0, deltaduration),
-                    scrollView.FadeTo(1, deltaduration)
-                    //optionselected.TranslateTo(liked.X, 0, duration)
-                    );
-
-                }
-                break;
-            case SwipeDirection.Right:
-                if (position > 0)
-                {
-                    if (position == 1)
-                    {
-                        nextposition = interests.X;
-                        position = 0;
-                    }
-                    if (position == 2)
-                    {
-                        nextposition = liked.X;
-                        position = 1;
-                    }
-                    await Task.WhenAll(
-                    scrollView.TranslateTo(400, 0, duration),
-                    scrollView.FadeTo(0, duration),
-                    optionselected.TranslateTo(nextposition, 0, duration));
-                    await Task.WhenAll(
-                    scrollView.TranslateTo(-400, 0, duration)
-                    );
-
-                    //scrollView.Content = currentlayout;
-                    if (position == 0)
-                    {
-                        scrollView.Content = currentLayout;
-
-                    }
-                    if (position == 1)
-                    {
-                        scrollView.Content = LikedLayout();
-
-                    }
-                    await Task.WhenAll(
-                    scrollView.TranslateTo(0, 0, deltaduration),
-                    scrollView.FadeTo(1, deltaduration)
-                    //optionselected.TranslateTo(interests.X, 0, duration)
-                    );
-
-                   
-                }
-                break;
-        }
-    }
-
-    async void Settings(object sender, EventArgs args)
-    {
-        await Navigation.PushAsync(new Settings());
     }
     StackLayout LikedLayout()
     {
@@ -177,7 +82,6 @@ public partial class Profile : ContentPage
             ColumnDefinitions ={
                 new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
                 new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }},
-
         };
         BtnGrid.Add(MoreInfoBtn, 0, 0);
         BtnGrid.Add(ShareBtn, 1, 0);
@@ -200,34 +104,26 @@ public partial class Profile : ContentPage
         var directors = new Label
         {
             Text = "Directed by",
-            //GridColumnSpan = 2
         };
         var directorlist = new Label
         {
             Text = "Sam Raimi",
-            //GridRow = 1,
-            //GridColumnSpan = 2,
             FontSize = 12
         };
         var boxline = new BoxView
         {
             Color = Colors.Black,
-            //GridRow = 2,
             HeightRequest = 2,
             HorizontalOptions = LayoutOptions.Fill
         };
         var actors = new Label
         {
             Text = "Stars",
-            //GridRow = 3,
-            //GridColumnSpan = 2
         };
         var actorlist = new Label
         {
             Text = "Tobey Maguire",
             FontSize = 12,
-            //GridRow = 4,
-            //GridColumnSpan = 2
         };
         infoGrid.Add(directors, 0, 0);
         infoGrid.Add(directorlist, 1, 1);
@@ -244,7 +140,6 @@ public partial class Profile : ContentPage
                             {
                                 Text = "Liked",
                                 FontAttributes = FontAttributes.Bold,
-                                //FontSize = Device.GetNamedSize(NamedSize.Header, typeof(Label)),
                                 HorizontalOptions = LayoutOptions.Center
                             },
                             new BoxView
@@ -276,7 +171,6 @@ public partial class Profile : ContentPage
                             {
                                 Text = "Released 03 may 2022",
                                 FontAttributes = FontAttributes.Bold,
-                                FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
                                 HorizontalOptions = LayoutOptions.Center
                             }
                      }
@@ -374,34 +268,26 @@ public partial class Profile : ContentPage
         var directors = new Label
         {
             Text = "Directed by",
-            //GridColumnSpan = 2
         };
         var directorlist = new Label
         {
             Text = "Sam Raimi",
-            //GridRow = 1,
-            //GridColumnSpan = 2,
             FontSize = 12
         };
         var boxline = new BoxView
         {
             Color = Colors.Black,
-            //GridRow = 2,
             HeightRequest = 2,
             HorizontalOptions = LayoutOptions.Fill
         };
         var actors = new Label
         {
             Text = "Stars",
-            //GridRow = 3,
-            //GridColumnSpan = 2
         };
         var actorlist = new Label
         {
             Text = "Tobey Maguire",
             FontSize = 12,
-            //GridRow = 4,
-            //GridColumnSpan = 2
         };
         infoGrid.Add(directors, 0, 0);
         infoGrid.Add(directorlist, 1, 1);
@@ -418,7 +304,6 @@ public partial class Profile : ContentPage
                             {
                                 Text = "History",
                                 FontAttributes = FontAttributes.Bold,
-                                //FontSize = Device.GetNamedSize(NamedSize.Header, typeof(Label)),
                                 HorizontalOptions = LayoutOptions.Center
                             },
                             new BoxView
@@ -450,7 +335,6 @@ public partial class Profile : ContentPage
                             {
                                 Text = "Released 03 may 2022",
                                 FontAttributes = FontAttributes.Bold,
-                                FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
                                 HorizontalOptions = LayoutOptions.Center
                             }
                      }
@@ -472,7 +356,99 @@ public partial class Profile : ContentPage
             });
         return currentlayout;
     }
+    async void OnSwiped(object sender, SwipedEventArgs e)
+    {
+        uint duration = 150;
+        //uint deltaduration = 150;
+        double currentposition = optionselected.X;
+        double nextposition = 0;
+        //var currLayout = currentLayout;
 
+        switch (e.Direction)
+        {
+            case SwipeDirection.Left:
+                if (position < 2)
+                {
+                    if (position == 1)
+                    {
+                        nextposition = History.X;
+                        position = 2;
+                    }
+                    if (position == 0)
+                    {
+                        nextposition = liked.X;
+                        position = 1;
+                    }
+                    await Task.WhenAll(scrollView.TranslateTo(-400, 0, duration),
+                    scrollView.FadeTo(0, duration),
+                    //Content.FadeTo(0, duration),
+                    optionselected.TranslateTo(nextposition, 0, duration)
+                    ); ;
+                    await Task
+                        .WhenAll(scrollView.TranslateTo(400, 0, duration));
+                    if (position == 2)
+                    {
+                        scrollView.Content = HistoryLayout();
+                        scrollView.BackgroundColor = Colors.Transparent;//Color.FromArgb("#FF6666");
+                        //Content.BackgroundColor = Color.FromArgb("#FF6666");
+                    }
+                    if (position == 1)
+                    {
+                        scrollView.Content = LikedLayout();
+                        scrollView.BackgroundColor = Colors.Transparent;
+                        //Content.BackgroundColor = Color.FromArgb("#77DD77");
+                        //scrollView.BackgroundColor = Color.FromArgb("#77DD77");
+                    }
+                    await Task.WhenAll(
+                    scrollView.TranslateTo(0, 0, duration),
+                    //Content.FadeTo(1, duration),
+                    scrollView.FadeTo(1, duration));
+                }
+                break;
+            case SwipeDirection.Right:
+                if (position > 0)
+                {
+                    if (position == 1)
+                    {
+                        nextposition = interests.X;
+                        position = 0;
+                    }
+                    if (position == 2)
+                    {
+                        nextposition = liked.X;
+                        position = 1;
+                    }
+                    await Task.WhenAll(scrollView.TranslateTo(400, 0, duration),
+                    scrollView.FadeTo(0, duration),
+                    //Content.FadeTo(0, duration),
+                    optionselected.TranslateTo(nextposition, 0, duration));
+                    await Task.WhenAll(
+                    scrollView.TranslateTo(-400, 0, duration));
+                    if (position == 0)
+                    {
+                        scrollView.Content = currentLayout;
+                        scrollView.BackgroundColor = Colors.Transparent;
+                        //Content.BackgroundColor = Color.FromArgb("#FFC0CB");
+                        //scrollView.BackgroundColor = Color.FromArgb("#FFC0CB");
+                    }
+                    if (position == 1)
+                    {
+                        scrollView.Content = LikedLayout();
+                        scrollView.BackgroundColor = Colors.Transparent;
+                        //Content.BackgroundColor = Color.FromArgb("#77DD77");
+                        //scrollView.BackgroundColor = Color.FromArgb("#77DD77");
+                    }
+                    await Task.WhenAll(
+                    scrollView.TranslateTo(0, 0, duration),
+                    //Content.FadeTo(1, duration),
+                    scrollView.FadeTo(1, duration)
+                    );
+
+
+                }
+                break;
+        }
+    }
 }
 
 //new VerticalStackLayout

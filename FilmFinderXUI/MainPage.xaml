@@ -1,20 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FilmFinderXUI.MainPage" BackgroundColor="#8bd6f2">
-    <StackLayout 
-                 Margin="5,0" 
-                 >
-
-        <Label Text="Train AI" FontAttributes="Bold" FontSize="Header" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="FilmFinderXUI.MainPage" BackgroundColor="#253f4b">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#446879"  StatusBarStyle="LightContent"/>
+    </ContentPage.Behaviors>
+    <StackLayout Margin="5,0">
+        <Label Text="Train AI" TextColor="white" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
         <BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" Margin="0,0,0,5" />
-        <BoxView Color="#8bd6f2" HeightRequest="70" HorizontalOptions="Fill" Margin="0,0,0,5" />
+        <!--<Label Text="If Seen Swipe Right to like Swipe left to dislike" FontAttributes="Bold" FontSize="Header" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+        <Label Text="If you havent seen the movie, then click whether interested or not interested" FontAttributes="Bold" FontSize="Header" HorizontalTextAlignment="Center" VerticalOptions="Start"/>-->
+        <!--<Label Text="Your Algorithm over time" TextColor="white" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+        <Slider Minimum="0" Maximum="1" />-->
 
         <Border Stroke="black" x:Name="moviecard"
         StrokeThickness="4"
         StrokeShape="RoundRectangle 10,10,10,10"
-        Background="white" 
-        Padding="16,8">
+        Background="#446879" 
+        Padding="16,8" ToolTipProperties.Text="Click to Save your data" Margin="0,45,0,0">
             <Border.GestureRecognizers>
                 <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
                 <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
@@ -22,13 +26,12 @@
                 <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped"/>
             </Border.GestureRecognizers>
             <VerticalStackLayout MaximumHeightRequest="500" MinimumHeightRequest="500">
-
                 <Label Text="Spider-Man" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center" />
                 <!--<BoxView Color="Black" HeightRequest="2" HorizontalOptions="Fill" />-->
                 <Border Stroke="black"
                     StrokeThickness="2"
                     StrokeShape="RoundRectangle 0,0,0,0"
-                    Background="#8bd6f2"
+                    Background="Black"
                     MinimumHeightRequest="300" MaximumHeightRequest="300" >
                     <!--<Image Aspect="Center" FlexLayout.AlignSelf="Center" Source="dotnet_bot.png" MaximumHeightRequest="200"  MinimumHeightRequest="200" HorizontalOptions="Center" MaximumWidthRequest="200" MinimumWidthRequest="200"  />-->
                     <Image>
@@ -46,12 +49,12 @@
                     <Label Text="Released: " FontSize="12" FontAttributes="Bold"  />
                     <Label Text="03 May 2002" FontSize="Micro" FontAttributes="Bold"  />
                 </HorizontalStackLayout>
-                <Border BackgroundColor="White" Stroke="white">
+                <Border BackgroundColor="Transparent"    Stroke="Transparent">
                     <Grid RowDefinitions="65,65" ColumnDefinitions="*,*">
-                        <Button Text="Liked" ImageSource="like.png" Grid.Row="0" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" MaximumHeightRequest="50" MinimumHeightRequest="50" />
-                        <Button Text="Dislike" ImageSource="showlove.png" Grid.Row="0" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
-                        <Button Text="Interested" ImageSource="like.png" Grid.Row="1" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
-                        <Button Text="Not Interested" ImageSource="showlove.png" Grid.Row="1" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  BackgroundColor="#8BD6F2" TextColor="#000000" />
+                        <Button Text="Liked" BackgroundColor="#77DD77" ImageSource="like.png" Grid.Row="0" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"   TextColor="#000000" MaximumHeightRequest="50" MinimumHeightRequest="50" />
+                        <Button Text="Interested" BackgroundColor="#FFC0CB" ImageSource="like.png" Grid.Row="1" Grid.Column="0" ContentLayout="Top" BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"   TextColor="#000000" />
+                        <Button Text="Not Interested" BackgroundColor="#FF6666" ImageSource="showlove.png" Grid.Row="1" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"   TextColor="#000000" />
+                        <Button Text="Dislike"  BackgroundColor="#FF6666" ImageSource="showlove.png" Grid.Row="0" Grid.Column="1"  ContentLayout="Top"  BorderColor="Black" BorderWidth="2" FontAttributes="Bold,Italic"  TextColor="#000000" />
                     </Grid>
                 </Border>
             </VerticalStackLayout>

@@ -9,7 +9,7 @@ public partial class Settings : ContentPage
 	}
     async void Back(object sender, EventArgs args)
     {
-        await Navigation.PushAsync(new Profile());
+        //await Navigation.PushAsync(new Profile());
     }
     
 }

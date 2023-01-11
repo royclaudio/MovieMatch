@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>false</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>FilmFinderXUI.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/obj/Debug/net7.0-ios/ios-arm64/mtouch-symbols.list</SymbolFile>
       <DSymName>FilmFinderXUI.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI</SourceProjectPath>
+      <SourceProjectPath>/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>

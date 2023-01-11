@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QJ4xIIUr2VoDAzSHZF8ViuDHHyWd5yRqT0Goe5k5wO97FDykspD3huR099h2nufw3iUu4HXbHDvJDRwc+5lMmQ==",
+  "dgSpecHash": "ZwjtF3/gWoalPQWZRXeMxWCJ4o5Lwyi1DC4N3Aomuqt/u55hR3OK5QbqdNwjbjtxqXbUM6GlHtbkFUefujiknw==",
   "success": true,
-  "projectFilePath": "/Users/royclaudio/Desktop/FilmFinder/FilmFinderAI/FilmFinderXUI/FilmFinderXUI.csproj",
+  "projectFilePath": "/Users/royclaudio/Projects/mvcProjects/MovieMatch/MovieMatch/FilmFinderXUI/FilmFinderXUI.csproj",
   "expectedPackageFiles": [
+    "/Users/RoyClaudio/.nuget/packages/communitytoolkit.maui/3.1.0/communitytoolkit.maui.3.1.0.nupkg.sha512",
+    "/Users/RoyClaudio/.nuget/packages/communitytoolkit.maui.core/3.1.0/communitytoolkit.maui.core.3.1.0.nupkg.sha512",
     "/Users/RoyClaudio/.nuget/packages/googlegson/2.9.1.1/googlegson.2.9.1.1.nupkg.sha512",
     "/Users/RoyClaudio/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "/Users/RoyClaudio/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

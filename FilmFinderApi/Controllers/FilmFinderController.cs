@@ -35,7 +35,7 @@ namespace FilmFinderApi.Controllers
         public async Task<List<MovieCatalogModel>> GetMovies()
         {
 
-            var context = await _context.MovieCatalog.Take(10).ToListAsync();
+            var context = await _context.MovieCatalog.Take(50).ToListAsync();
 
             return context;
         }

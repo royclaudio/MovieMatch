@@ -12,17 +12,25 @@
 		<data>
 		7Lqt5BCNmZk8nni6BMzNgGkeOFI=
 		</data>
+		<key>CommunityToolkit.Maui.Core.dll</key>
+		<data>
+		mv2W8ixDbqODVhmetKWwBR4iyWQ=
+		</data>
+		<key>CommunityToolkit.Maui.dll</key>
+		<data>
+		sX4nhOpzNM0JifSNZe9dG2DZxE0=
+		</data>
 		<key>FilmFinderXUI.dll</key>
 		<data>
-		uN8pfXCqJB4rQfyzRBKH/tCyqxI=
+		P5WKhqtLndCvh2SsqNbZrl+dVcQ=
 		</data>
 		<key>FilmFinderXUI.pdb</key>
 		<data>
-		AR4gsA5J1W55ALRaddl+t+sj0RE=
+		AuqO4tkAxutVzqjKwU1TFqcMK3M=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ufK3u7yojRxijaR3yGHNzE/aD/8=
+		BjWA6eI+ywBOtIkaTpOl+AJ6Mis=
 		</data>
 		<key>MauiInfo 2.plist</key>
 		<data>
@@ -973,18 +981,32 @@
 			CPj/aTRrBa+6l3L/La+h8DXHP2QCO3p4geeXobyn+Bs=
 			</data>
 		</dict>
+		<key>CommunityToolkit.Maui.Core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vlg3gHi7nJhY41NAGeSX31JZG+Nen2HxxaUR/gVpUII=
+			</data>
+		</dict>
+		<key>CommunityToolkit.Maui.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XvBgoYGneJufXCgMoIASgCoqJiY2o03e+lrKE4NiA9Y=
+			</data>
+		</dict>
 		<key>FilmFinderXUI.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u9K38AK1xIRyztrCw76E08rA0bdCs5/GdiqnMW8rBi8=
+			85iKghH5xJoPhtO81rZ7MMqT5DFfdAUSkDqykoFvq08=
 			</data>
 		</dict>
 		<key>FilmFinderXUI.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			850wA+YvcbyjJANMp4+sjf35oUTg+9FA2qMlKvvPeuY=
+			YVf25Y7R7xyDK4U1HvF6MAGtpGxexvE/SwNIYcReNtU=
 			</data>
 		</dict>
 		<key>MauiInfo 2.plist</key>
